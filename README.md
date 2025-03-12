@@ -1,0 +1,2 @@
+# TelefonicaTech
+Aplicativo de portafolios
