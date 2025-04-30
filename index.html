@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="Css/styles_index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="Telefónica">
+            <h3>Telefónica Tech</h3>
+        </div>
+        <button id="cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
+      <script>
+        function cerrarSesion() {
+        // Eliminar la sesión del usuario (si usas localStorage o sessionStorage)
+        sessionStorage.clear();
+        localStorage.removeItem("usuario");
+
+        // Redirigir al login
+        window.location.href = "login.html"; // Asegúrate de poner la ruta correcta del login
+       }
+      </script>
+
+    </header>
+    <section class="contenido">
+        <div class="texto">
+            <h2>Bienvenido a Telefónica Tech</h2>
+            <p>Explora los portafolios de nuestros aliados estratégicos, proveedores y mayoristas.</p>
+            <p>Este aplicativo web permite a los usuarios acceder a un panel dinámico donde pueden visualizar el portafolio de cada proveedor, mayorista y aliados en un formato de presentacion. Facilitando la gestión y consulta de información de los mismo, optimizando la toma de decisiones y mejorando la eficiencia en la organización.</p>
+            <div class="botones-portafolio">
+            <button onclick="irAPortafolio('index_Proveedores.html')">Fabricas</button>
+
+            <button onclick="irAPortafolio('index_Aliados.html')">Aliados</button>
+
+            <button onclick="irAPortafolio('index_Mayoristas.html')">Mayoristas</button>
+            </div>
+        </div>
+        <div class="script">
+            <script>
+                function irAPortafolio(url) {
+                    window.location.href = url;
+                }
+            </script> 
+        </div>
+        <div class="imagen">
+            <img src="img/imagen.jpg" alt="Ilustración de portafolios">
+        </div>
+    </section>
+</body>
+</html>

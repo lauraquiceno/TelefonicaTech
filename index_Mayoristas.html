@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Mayoristas</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <script src="java/buscador.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <a href="index.html" class="site-title">Telefónica Tech</a>
+
+        </div>
+        <nav>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar portafolios..." onkeyup="search()">
+                <button onclick="search()">🔍</button>
+            </div>
+        </nav>
+        <div class="botones-navegacion">
+            <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+        <script >
+            function cerrarSesion() {
+            // Aquí puedes limpiar sessionStorage o localStorage si usas autenticación
+            alert("Sesión cerrada correctamente");
+            window.location.href = "login.html"; // Redirigir a la página de login
+            }
+        </script>
+    </header>
+
+    <div class="banner">
+        Aqui encontraras los portafolios de los Mayoristas de Telefenica Tech.
+    </div>
+    <main>
+        <h1>Portafolios Mayoristas</h1>
+        <div class="brand-container">
+            <div class="carousel-container">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Adistec</h3>
+                        <img src="img/Adistec.jpg" alt="Adistec" class="proveedor-img">
+                        <a href="Adistec.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Dacas</h3>
+                        <img src="img/Dacas.png" alt="Dacas" class="proveedor-img">
+                        <a href="Dacas.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Domotes</h3>
+                        <img src="img/Domotes.PNG" alt="Domotes" class="proveedor-img">
+                        <a href="Domotes.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                    <div class="brand-card"> <div class="menu-icon">
+                        &#x22EE; <!-- Ícono de tres puntos -->
+                        <div class="menu-options">
+                            <button onclick="editCard(this)">Editar</button>
+                            <button onclick="deleteCard(this)">Eliminar</button>
+                        </div>
+                    </div>
+                        <h3 class="titulo"> Microft Ingram</h3>
+                        <img src="img/microsoft.png" alt="Igram" class="proveedor-img">
+                        <a href="Microsoft_Ingram.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Licencias Online</h3>
+                        <img src="img/LicenciasOnline.png" alt="LicenciasOnline" class="proveedor-img">
+                        <a href="Licencias_Online.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Megadvantage</h3>
+                        <img src="img/Megadvantage.png" alt="Megadvantage" class="proveedor-img">
+                        <a href="Megadvantage.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">TD Synnex</h3>
+                        <img src="img/TD_Synnex.jpg" alt="Td_Synnex" class="proveedor-img">
+                        <a href="Td_Synnex.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </main>
+        <script>
+            function moveSlide(direction) {
+                let carousel = document.querySelector(".carousel");
+                let scrollAmount = 220; // Ajusta el desplazamiento según el tamaño de las tarjetas
+                carousel.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+            }
+        </script>
+
+</body>
+</html>

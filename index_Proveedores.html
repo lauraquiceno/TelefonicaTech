@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Fabricas</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <script src="java/buscador.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <a href="index.html" class="site-title">Telefónica Tech</a>
+        </div>
+        <nav>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar portafolios..." onkeyup="search()">
+                <button onclick="search()">🔍</button>
+            </div>
+        </nav>     
+        <div class="botones-navegacion">
+            <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+        <script >
+            function cerrarSesion() {
+            // Aquí puedes limpiar sessionStorage o localStorage si usas autenticación
+            alert("Sesión cerrada correctamente");
+            window.location.href = "login.html"; // Redirigir a la página de login
+            }
+        </script>
+    </header>
+
+    <div class="banner">
+        Aqui encontraras los portafolios de los proveedores de Telefenica Tech.
+    </div>
+
+    <main>
+        <h1>Portafolios Fabricas</h1>
+        <div class="brand-container">
+            <div class="carousel-container">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Checkpoint</h3>
+                        <img src="img/Checkpoint.jpg" alt="Checkpoint" class="proveedor-img">
+                        <a href="checkpoint.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a> 
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Dynatrace</h3>
+                        <img src="img/Dynatrance.jpg" alt="Dynatrace" class="proveedor-img">
+                        <a href="Dynatrance.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Fortinet</h3>
+                        <img src="img/Fortinet.jpg" alt="Fortinet" class="proveedor-img">
+                        <a href="Fortinet.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Nozomi</h3>
+                        <img src="img/Nozomi.png" alt="Nozomi" class="proveedor-img">
+                        <a href="Nozomi.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">IMB</h3>
+                        <img src="img/IBM.jpg" alt="IBM" class="proveedor-img">
+                        <a href="IBM.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Splunk</h3>
+                        <img src="img/Splunk.jpg" alt="Splunk" class="proveedor-img">
+                        <a href="Splunk.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Tenable</h3>
+                        <img src="img/Tenable.png" alt="Tenable" class="proveedor-img">
+                        <a href="Tenable.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Tend Micro</h3>
+                        <img src="img/TrendMicro.png" alt="Trend Micro" class="proveedor-img">
+                        <a href="Trend_micro.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>  
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">AWS</h3>
+                        <img src="img/AWS.jpg" alt="AWS" class="proveedor-img">
+                        <a href="AWS.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Microsoft/INGRAM</h3>
+                        <img src="img/microsoft.png" alt="AWS" class="proveedor-img">
+                        <a href="Microsoft.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Aruba</h3>
+                        <img src="img/Aruba.png" alt="Aruba" class="proveedor-img">
+                        <a href="Aruba.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Avaya</h3>
+                        <img src="img/Avaya.png" alt="Avaya" class="proveedor-img">
+                        <a href="Avaya.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Cato</h3>
+                        <img src="img/Cato.png" alt="Cato" class="proveedor-img">
+                        <a href="Cato.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                        
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Cisco</h3>
+                        <img src="img/Cisco.png" alt="Cisco" class="proveedor-img">
+                        <a href="Cisco.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>   
+                      
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Cloudfare</h3>
+                        <img src="img/Cloudflare.png" alt="Cloudfare" class="proveedor-img">
+                        <a href="Cloudfare.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Crowdstrike</h3>
+                        <img src="img/Crowdstrike.jpg" alt="CrowdStrike" class="proveedor-img">
+                        <a href="Crowdstrike.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Darktrace</h3>
+                        <img src="img/Darktrace.png" alt="Darktrace" class="proveedor-img">
+                        <a href="Darktrace.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>   
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Elastic</h3>
+                        <img src="img/Elastic.png" alt="Elastic" class="proveedor-img">
+                        <a href="Elastic.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div> 
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Exabeam</h3>
+                        <img src="img/Exabeam.png" alt="Exabeam" class="proveedor-img">
+                        <a href="Exabeam.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div> 
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Extreme</h3>
+                        <img src="img/Extreme.png" alt="Extreme" class="proveedor-img">
+                        <a href="Extreme.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div> 
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Forcepoint</h3>
+                        <img src="img/Forcepoint.png" alt="" class="proveedor-img">
+                        <a href="Forcepoint.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+    
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Fractalia</h3>
+                        <img src="img/Fractalia.png"alt="Fractalia" class="proveedor-img">
+                        <a href="Fractalia.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>   
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Genesys</h3>
+                        <img src="img/Genesys.png"alt="Genesys" class="proveedor-img">
+                        <a href="Genesys.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>  
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Hiperpbx</h3>
+                        <img src="img/Hiperpbx.png"alt="Hiperpbx" class="proveedor-img">
+                        <a href="Hiperpbx.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>  
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Hitachi</h3>
+                        <img src="img/Hitachi.png"alt="Hitachi" class="proveedor-img">
+                        <a href="Hitachi.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>  
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Mcaffe</h3>
+                        <img src="img/Mcaffe.png"alt="Mcaffe" class="proveedor-img">
+                        <a href="Mcaffe.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Netskope</h3>
+                        <img src="img/Netskope.jpg"alt="Netskope" class="proveedor-img">
+                        <a href="Netskope.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Netwitness</h3>
+                        <img src="img/Netwitness.png"alt="Netwitness" class="proveedor-img">
+                        <a href="Netwitness.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Opentext</h3>
+                        <img src="img/Opentext.png"alt="Opentext" class="proveedor-img">
+                        <a href="Opentext.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Oracle</h3>
+                        <img src="img/Oracle.png"alt="Oracle" class="proveedor-img">
+                        <a href="Oracle.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Palo Alto</h3>
+                        <img src="img/PaloAlto.png"alt="Palo Alto" class="proveedor-img">
+                        <a href="Palo_Alto.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Proofpoint</h3>
+                        <img src="img/Proofpoint.png"alt="Proofpoint" class="proveedor-img">
+                        <a href="Proofpoint.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Radware</h3>
+                        <img src="img/Radware.png"alt="Radware" class="proveedor-img">
+                        <a href="Radware.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Rapid 7</h3>
+                        <img src="img/Rapid7.jpg"alt="Rapid 7" class="proveedor-img">
+                        <a href="Rapid_7.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>  
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Sixbell</h3>
+                        <img src="img/Sixbell.png"alt="Sixbell" class="proveedor-img">
+                        <a href="Sixbell.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Sonicwall</h3>
+                        <img src="img/Sonicwall.png"alt="Sonicwall" class="proveedor-img">
+                        <a href="SonicWall.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Sophos</h3>
+                        <img src="img/Sophos2.png"alt="Sophos" class="proveedor-img">
+                        <a href="Sophos.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Stellar Cyber</h3>
+                        <img src="img/StellarCyber.png"alt="Stellar Cyber" class="proveedor-img">
+                        <a href="Stellar Cyber.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Tanium</h3>
+                        <img src="img/Tanium.png"alt="Tanium" class="proveedor-img">
+                        <a href="Tanium.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Trellix</h3>
+                        <img src="img/Trellix.png"alt="Trellix" class="proveedor-img">
+                        <a href="Trellix.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">VU Security</h3>
+                        <img src="img/VuSecurity.png"alt="VU Security" class="proveedor-img">
+                        <a href="VUSecurity.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Whalebone</h3>
+                        <img src="img/Whalebone.png"alt="Whalebone" class="proveedor-img">
+                        <a href="Whalebone.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                    <div class="brand-card">
+                        <div class="menu-icon">
+                            &#x22EE; <!-- Ícono de tres puntos -->
+                            <div class="menu-options">
+                                <button onclick="editCard(this)">Editar</button>
+                                <button onclick="deleteCard(this)">Eliminar</button>
+                            </div>
+                        </div>
+                        <h3 class="titulo">Zscaler</h3>
+                        <img src="img/Zscaler.png"alt="Zscaler" class="proveedor-img">
+                        <a href="Zscaler.html" target="_blank">
+                            <button class="btn-ver">Ver →</button>
+                        </a>
+                    </div>
+                        
+                </div>
+
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </main>
+        <script>
+            function moveSlide(direction) {
+                let carousel = document.querySelector(".carousel");
+                let scrollAmount = 220; // Ajusta el desplazamiento según el tamaño de las tarjetas
+                carousel.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+            }
+        </script>
+            
+</body>
+</html>
