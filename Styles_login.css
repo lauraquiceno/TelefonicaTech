@@ -1,0 +1,74 @@
+/* Fondo con gradiente azul */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #025AF9, #074BF2);
+}
+
+/* Contenedor del login */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Caja de login */
+.login-box {
+    background: white;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del título */
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Campo de correo */
+input {
+    width: 90%; /* Reducir el ancho del campo */
+    padding: 10px;
+    margin: 10px auto; /* Centrar horizontalmente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block; /* Asegurar que se comporte como bloque */
+}
+
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #074BF2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s; 
+}
+button {
+    width: 80%; /* Reducir el ancho del botón */
+    display: block; /* Asegurar que se comporte como bloque */
+    margin: 10px auto 0 auto; /* Centrar horizontalmente */
+}
+button:hover {
+    background: #074BF2;
+}

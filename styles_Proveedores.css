@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+.header {
+      background: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid blue;
+}
+.header img {
+    height: 100px;
+    margin-right: 10px;
+}
+.header h1 {
+      font-size: 18px;
+      color: #005a9c;
+}
+.container {
+      display: flex;
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+}
+.image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+}
+.text {
+      flex: 2;
+      padding: 10px;
+}
+.separator {
+      width: 80%;
+      height: 2px;
+      background: #247DFB;
+      margin: 20px auto;
+}
+.contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact {
+      flex: 1;
+}
+.factory {
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
+}
+.portfolio {
+      flex: 1;
+      text-align: right;
+}
+.portfolio a {
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+}
+.portfolio a:hover {
+      text-decoration: underline;
+}
+.back-button {
+      background: #005a9c;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+}
+.back-button:hover {
+      background: #003f6f;
+}
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    gap: 10px; /* Espacio entre el logo y el texto */
+}
+
+.logo {
+    height: 100px; /* Ajusta según el tamaño de tu logo */
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}

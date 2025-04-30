@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+}
+
+/* Estilos generales del header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    border-bottom: 2px solid #025AF9;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 90px;
+    margin-right: 10px;
+}
+
+.logo h3 {
+    font-size: 18px;
+    color: #025AF9;
+}
+
+/* Contenedor del select */
+.select-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+select {
+    width: 250px;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #025AF9;
+    border-radius: 5px;
+    outline: none;
+    background: #f8f9fa;
+    cursor: pointer;
+}
+
+/* Botón de cerrar sesión */
+.logout {
+    background: #025AF9;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background: #025AF9;
+}
+/* Contenedor principal */
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de texto */
+.texto {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.texto h2 {
+    font-size: 32px;
+    color: #0052D4;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Sección de imagen */
+.imagen {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* boton cerras sesion */
+#cerrar-sesion {
+    background-color: #025AF9; /* azul suave */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#cerrar-sesion:hover {
+    background-color: #074BF2; /* Azul mas oscuro */
+}
+
+#cerrar-sesion:active {
+    transform: scale(0.95);
+}
+
+/* BOTONES PORTAFOLIOS */
+.botones-portafolio {
+    display: flex;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+.botones-portafolio button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botones-portafolio button:hover {
+    background-color: #0056b3;
+}
